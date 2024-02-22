@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Verdana, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+/* Хедер */
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    box-shadow: 0px 0px 18px 0 #EBEBF1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.logos__logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.header__search-container {
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.search-container__input {
+    height: 40px;
+    border-width: 1px;
+    border-color: #EBEBF1;
+    border-style: solid;
+    border-left-style: none;
+    border-end-end-radius: 6px;
+    border-start-end-radius: 6px;
+    flex: 1;
+}
+
+.search-container__icon-container {
+    border: 1px solid #EBEBF1;
+    border-right-style: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-start-start-radius: 6px;
+    border-end-start-radius: 6px;
+    background-color: white;
+}
+
+.search-icon__img {
+    width: 24px;
+    height: 24px;
+}
+
+.header__account {
+    flex: 1;
+    border-left: 1px solid #EBEBF1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header__logos {
+    display: flex;
+    flex: 1;
+}
+
+.account__avatar {
+    padding-left: 15px;
+}
+
+.logos__account_logo {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .header__account {
+        display: none;
+    }
+
+    .logos__logo {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .logos__account_logo {
+        display: block;
+        padding-top: 10px;
+        padding-right: 5px;
+    }
+
+    .header__logos {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .header__search-container {
+        padding: 0;
+    }
+
+    .search-container__icon-container {
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid #EBEBF1;
+    }
+
+    .search-container__input {
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid #EBEBF1;
+    }
+}
+
+/* Наши партнеры */
+
+.content {
+    padding: 0 15px;
+    margin-top: 120px;
+}
+
+.content__title-container {
+    margin-bottom: 30px;
+}
+
+.title-container__title {
+    color: #121920;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 57.6px;
+    text-transform: uppercase;
+}
+
+.content__catalog {
+    padding: 0;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: calc((100vw - 768px)/(1440 - 768) * (30 - 20) + 20px);
+    list-style-type: none;
+}
+
+.catalog__cell {
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 270px;
+    width: calc((100vw - 768px)/(1440 - 768) * (270 - 229) + 229px);
+    height: 120px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.catalog__cell:hover {
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, .1);
+}
+
+.cell__img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+    .content__catalog {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .catalog__cell {
+        width: 270px;
+    }
+
+    .partners__grid {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .catalog__cell {
+        flex-basis: 23.08%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .catalog__cell {
+        flex-basis: 31.4%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .catalog__cell {
+        max-width: 400px;
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .catalog__cell {
+        height: 140px;
+        padding: 40px;
+        flex-basis: 100%;
+    }
+}
